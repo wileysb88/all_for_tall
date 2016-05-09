@@ -1,0 +1,434 @@
+// VARIABLES
+// -----------------------------------------
+@background-color: rgba(36, 36, 36, 0.8);
+
+.borders() {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.fonts() {
+  font-family: 'Economica', sans-serif;
+  color: white;
+}
+
+.left-side() {
+  position: relative;
+  float: left;
+}
+
+.right-side() {
+  position: relative;
+  float: right;
+}
+
+.login-input() {
+  .borders;
+  margin-right: 10px;
+  padding: 5px;
+  font-family: 'Economica', sans-serif;
+  font-size: 20px;
+}
+
+// BEGIN THE SKELETON GRID SYSTEM
+// -------------------------------------------
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+
+// BUTTON SKELETON
+// -----------------------------
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  text-align: center;
+  font-family: 'Economica', sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  white-space: nowrap;
+  background-color: rgba(184, 179, 183, 0.4);
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: rgb(219, 191, 152);
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+
+// this is the map
+
+#map-and-search{
+  .right-side;
+  width: 48%;
+}
+
+#map{
+  width: 100%;
+  height: 500px;
+  background-color: @background-color;
+  .right-side;
+  .borders;
+  margin: 15px 0px;
+  color: black;
+
+}
+
+#search-form{
+  margin-top: 100px;
+}
+
+#address-search{
+  width: 100%;
+  .borders;
+  height: 38px;
+  font-size: 25px;
+  font-family: 'Economica', sans-serif;
+  text-align: center;
+}
+
+#address-search-button{
+  width: 100%;
+
+}
+
+.feed-container {
+  .borders;
+  .left-side;
+  padding: 20px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  background-color: @background-color;
+  width: 40%;
+  height: 460px;
+  overflow: scroll;
+
+}
+
+.email{
+  .login-input;
+}
+
+.password{
+  .login-input;
+}
+
+
+body{
+  background: url('/images/background-image-4.jpg') no-repeat center center fixed;
+  background-size: cover;
+  .fonts;
+}
+
+.input-row{
+  .right-side;
+  width: 48%;
+}
+
+#login-form{
+  .right-side;
+  margin-top: 10px;
+}
+#welcome-p{
+  text-align: center;
+  font-size: 20px;
+}
+
+#welcome-message{
+  float: left;
+  .fonts;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+#signed-in{
+  .right-side;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#register-title{
+  text-align: center;
+  font-size: 36px;
+}
+
+.feed-item{
+  overflow: scroll;
+  .borders;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+img{
+  text-align: center;
+}
+
+#post-button{
+  text-align: center;
+  .left-side;
+  margin-left: 20px!important;
+}
+
+#results-button{
+  text-align: center;
+  .right-side;
+  margin-right: 20px!important;
+}
+
+#about-button{
+  text-align: center;
+  .right-side;
+  margin-right: 20px!important;
+}
+
+#upload-button{
+  width: 100%!important;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#register-form{
+  margin-bottom: 20px;
+  margin-left: 15px;
+  label{
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  input{
+    width: 60%;
+    .right-side;
+    height: 20px;
+    .borders;
+    font-family: 'Economica', sans-serif;
+    padding: 5px;
+  }
+}
+
+#post-label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#post-instruction {
+  text-align: center;
+}
+
+#post-input-nonpic {
+    .right-side;
+    .borders;
+    height: 20px;
+    width: 60%;
+    margin-left: 20px;
+    padding: 5px;
+    font-family: 'Economica', sans-serif;
+    font-size: 20px;
+}
+
+
+#register-button{
+  margin-left: 30%;
+  margin-top: 20px;
+}
+
+
+.register{
+  .right-side;
+  margin-top: 10px;
+  .fonts
+
+}
+
+#header{
+  width: 100%;
+
+}
+
+#title{
+  .left-side;
+  width: 60%
+  .fonts;
+  font-size: 56px;
+
+}
+
+#logout-button{
+  margin-left: 50px;
+}
+
+#new-post-title{
+  text-align: center;
+}
+
+#feed-top-message{
+  text-align: center;
+}
+
+// start popup css
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 10px auto;
+  padding: 20px;
+  background: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+
+
+  .close{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    color: white;
+  }
+
+  a{
+    text-decoration: none;
+    font-style: bold;
+    font-size: 1.5em;
+    position: relative;
+    float: right;
+  }
+
+  fieldset{
+    display: inline-block;
+    margin: auto;
+  }
+
+} // end popup css
